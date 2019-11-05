@@ -1,6 +1,6 @@
 FROM openjdk:8-jdk-alpine
 
-ARG SENTINEL_VERSION="1.6.3"
+ARG SENTINEL_VERSION="1.6.2"
 
 WORKDIR /home/sentinel
 
@@ -10,7 +10,7 @@ RUN adduser -S sentinel && \
     echo "Asia/Shanghai" >  /etc/timezone && \
     rm -rf /var/cache/apk/* && \
     sed -i "s/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g" /etc/apk/repositories && \
-    wget -qO sentinel-dashboard.jar "https://github.com/alibaba/Sentinel/releases/download/${SENTINEL_VERSION}/sentinel-dashboard-${SENTINEL_VERSION}.jar"
+    wget -O sentinel-dashboard.jar "https://github.com/alibaba/Sentinel/releases/download/${SENTINEL_VERSION}/sentinel-dashboard-${SENTINEL_VERSION}.jar"
 
 USER sentinel
 
