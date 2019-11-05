@@ -1,6 +1,6 @@
 FROM openjdk:8-jdk-alpine
 
-ARG SENTINEL_VERSION="1.6.2"
+ARG SENTINEL_VERSION="1.6.3"
 
 WORKDIR /home/sentinel
 
